@@ -60,4 +60,6 @@ const Counter = memo(function Counter({ initialCount }) {
   );
 })
 
-export default Counter
+export default Counter;
+
+
