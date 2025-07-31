@@ -27,6 +27,8 @@ function isPrime(number) {
   return true;
 }
 
+// memo ei tasu üle kasutada. kui mõnel komponendil on palju propse ja see memoga ümbritseda,
+// siis võib renderdusprotsess sama välja tulla, kui ilma memota, sest React vaatab kõik propsid ükshaaval üle.
 const Counter = memo(function Counter({ initialCount }) {
   log('<Counter /> rendered', 1);
   const initialCountIsPrime = isPrime(initialCount);
