@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import React from 'react';
+
 
 import Counter from './components/Counter/Counter.jsx';
 import Header from './components/Header.jsx';
@@ -11,7 +13,7 @@ function App() {
   const [chosenCount, setChosenCount] = useState(0);
 
   function handleSetCount(newCount) {
-    setChosenCount(newCount)
+    setChosenCount(newCount);
   }
 
   return (
@@ -19,7 +21,7 @@ function App() {
       <Header />
       <main>
         <ConfigureCounter onSet={handleSetCount}  />
-        <Counter initialCount={chosenCount} />
+        <Counter key={chosenCount} initialCount={chosenCount} />
       </main>
     </>
   );
